@@ -2,7 +2,6 @@ var ss = SpreadsheetApp.openById('Enter Sheet ID');
 var sheet = ss.getSheetByName('Sheet1');
 var timezone = "Enter Time Zone of Your Country";
 
-
 function doGet(e){
   Logger.log( JSON.stringify(e) );
   if (e.parameter == 'undefined') {
@@ -18,8 +17,6 @@ function doGet(e){
 
   return ContentService.createTextOutput("Card holder name is stored in column A");
 }
-
-
 function stripQuotes( value ) {
   return value.toString().replace(/^["']|['"]$/g, "");
 }
